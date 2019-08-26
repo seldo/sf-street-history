@@ -6,7 +6,9 @@ class Slide extends React.Component {
         return <div className="slide">
             <h1>{ this.props.slide.title }</h1>
             <p>{ this.props.slide.text }</p>
-
+            { this.props.isCurrent && 
+                <div>I'm the current slide</div>
+            } 
             <style jsx>{`
                 .slide {
                     border: 1px solid black;

@@ -33,12 +33,22 @@ const slides = [
 
 class Home extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.escFunction = this.escFunction.bind(this);
+    this.state = {
+      currentSlide: 0
+    }
+  }
+
   escFunction(event) {
     if(event.keyCode === 37) {
       console.log("left!")
+      this.setState({currentSlide: this.state.currentSlide - 1})
     }
     if(event.keyCode === 39) {
       console.log("right!")
+      this.setState({currentSlide: this.state.currentSlide + 1})
     }
   }
   componentDidMount(){
@@ -57,7 +67,8 @@ class Home extends React.Component {
       <div className="slideWindow">
         <div className="slideContainer">
           {slides.map( (slide,index) => {
-            return <Slide slide={slide} key={index}></Slide>
+            let isCurrent = (index == this.state.currentSlide)
+            return <Slide slide={slide} isCurrent={isCurrent} key={index}></Slide>
           })}
         </div>
       </div>
