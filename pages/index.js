@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Nav from '../components/nav'
 import Slide from '../components/slide'
+import GoogleMap from '../components/googlemap'
 
 const slides = [
   {
@@ -81,6 +82,10 @@ class Home extends React.Component {
       <Head>
         <title>Home</title>
       </Head>
+
+      <div className="mapWindow">
+        <GoogleMap></GoogleMap>
+      </div>
 
       <div className="slideWindow">
         <div className="slideContainer" style={{marginLeft: this.state.containerMargin}}>
