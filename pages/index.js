@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import Nav from '../components/nav'
+import Slide from '../components/slide'
 
 const slides = [
   {
@@ -40,10 +41,7 @@ const Home = () => (
 
     <div className='hero'>
       {slides.map( (slide,index) => {
-        return <div className="slide" key={index}>
-            <h1>{ slide.title }</h1>
-            <p>{slide.text}</p>
-          </div>
+        return <Slide slide={slide} index={index}></Slide>
       })}
     </div>
 
