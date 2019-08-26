@@ -37,20 +37,38 @@ class Home extends React.Component {
     super(props)
     this.escFunction = this.escFunction.bind(this);
     this.state = {
-      currentSlide: 0
+      currentSlide: 0,
+      containerMargin: "calc((100% - 36em)/2)"
     }
   }
 
   escFunction(event) {
     if(event.keyCode === 37) {
       console.log("left!")
-      this.setState({currentSlide: this.state.currentSlide - 1})
+      let slideIndex = this.state.currentSlide - 1
+      if (slideIndex < 0) slideIndex = 0
+      this.setState({
+        currentSlide: slideIndex,
+        containerMargin: this.calcMargin(slideIndex)
+      })
     }
     if(event.keyCode === 39) {
       console.log("right!")
-      this.setState({currentSlide: this.state.currentSlide + 1})
+      let slideIndex = this.state.currentSlide + 1
+      if (slideIndex >= slides.length) slideIndex = slides.length - 1
+      this.setState({
+        currentSlide: slideIndex,
+        containerMargin: this.calcMargin(slideIndex)
+      })
     }
   }
+
+  calcMargin(index) {
+    let margin = "calc( ((100% - 36em)/2) - " + (index*38) + "em)"
+    console.log(margin)
+    return margin
+  }
+
   componentDidMount(){
     document.addEventListener("keydown", this.escFunction, false);
   }
@@ -65,11 +83,12 @@ class Home extends React.Component {
       </Head>
 
       <div className="slideWindow">
-        <div className="slideContainer">
+        <div className="slideContainer" style={{marginLeft: this.state.containerMargin}}>
           {slides.map( (slide,index) => {
             let isCurrent = (index == this.state.currentSlide)
             return <Slide slide={slide} isCurrent={isCurrent} key={index}></Slide>
           })}
+          <div className="dummySlide"></div>
         </div>
       </div>
 
@@ -79,53 +98,13 @@ class Home extends React.Component {
           box-sizing: border-box;
           width: 100%;
           overflow: hidden;
-          border: 1px solid red;
         }
         .slideContainer {
-          border: 1px solid blue;
           display: flex;
           flex-wrap: nowrap;
-          margin-left: calc((100% - 30em)/2)
         }
-        .title {
-          margin: 0;
-          width: 100%;
-          padding-top: 80px;
-          line-height: 1.15;
-          font-size: 48px;
-        }
-        .title,
-        .description {
-          text-align: center;
-        }
-        .row {
-          max-width: 880px;
-          margin: 80px auto 40px;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-        }
-        .card {
-          padding: 18px 18px 24px;
-          width: 220px;
-          text-align: left;
-          text-decoration: none;
-          color: #434343;
-          border: 1px solid #9b9b9b;
-        }
-        .card:hover {
-          border-color: #067df7;
-        }
-        .card h3 {
-          margin: 0;
-          color: #067df7;
-          font-size: 18px;
-        }
-        .card p {
-          margin: 0;
-          padding: 12px 0 0;
-          font-size: 13px;
-          color: #333;
+        .dummySlide {
+          min-width: 30em;
         }
       `}</style>
     </div>

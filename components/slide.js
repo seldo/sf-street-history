@@ -3,7 +3,7 @@ import React from 'react'
 class Slide extends React.Component {
 
     render() {
-        return <div className="slide">
+        return <div className={"slide " + (this.props.isCurrent && "current")}>
             <h1>{ this.props.slide.title }</h1>
             <p>{ this.props.slide.text }</p>
             { this.props.isCurrent && 
@@ -11,10 +11,12 @@ class Slide extends React.Component {
             } 
             <style jsx>{`
                 .slide {
-                    border: 1px solid black;
                     min-width: 30em;
-                    margin: 10px;
-                    padding: 10px;
+                    margin: 2em;
+                    padding: 2em;
+                }
+                .current {
+                    background: #eee
                 }
             `}</style>
         </div>
