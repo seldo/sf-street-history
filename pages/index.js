@@ -94,9 +94,11 @@ class Home extends React.Component {
 
       <style jsx>{`
         .slideWindow {
-          margin-top: 10em;
-          box-sizing: border-box;
+          position: absolute;
+          top: 66%;
+          left: 0px;
           width: 100%;
+          box-sizing: border-box;
           overflow: hidden;
         }
         .slideContainer {
