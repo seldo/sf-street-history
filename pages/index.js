@@ -37,18 +37,27 @@ const Home = () => (
       <title>Home</title>
     </Head>
 
-    <Nav />
-
-    <div className='hero'>
-      {slides.map( (slide,index) => {
-        return <Slide slide={slide} index={index}></Slide>
-      })}
+    <div className="slideWindow">
+      <div className="slideContainer">
+        {slides.map( (slide,index) => {
+          return <Slide slide={slide} index={index}></Slide>
+        })}
+      </div>
     </div>
 
     <style jsx>{`
-      .hero {
+      .slideWindow {
+        margin-top: 10em;
+        box-sizing: border-box;
         width: 100%;
-        color: #333;
+        overflow: hidden;
+        border: 1px solid red;
+      }
+      .slideContainer {
+        border: 1px solid blue;
+        display: flex;
+        flex-wrap: nowrap;
+        margin-left: calc((100% - 30em)/2)
       }
       .title {
         margin: 0;
