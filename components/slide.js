@@ -16,12 +16,12 @@ class Slide extends React.Component {
         return <div className="slide">
             <Swipeable onSwipedRight={ this.props.moveleft } onSwipedLeft={ this.props.moveright }>
                 <div className={"slideContent " + (this.props.isCurrent && "current")}>
-                    <div className="arrow" onClick={ this.props.moveleft }>&lt;</div>
+                    <div className="arrow" onClick={ this.props.moveleft }>◀</div>
                     <div className="slideText" onClick={ this.props.moveright }>
                         <h1>{ this.props.slide.title }</h1>
-                        <p>{ this.props.slide.text }</p>
+                        <p dangerouslySetInnerHTML={ {__html: this.props.slide.text} }></p>
                     </div>
-                    <div className="arrow" onClick={ this.props.moveright }>&gt;</div>
+                    <div className="arrow" onClick={ this.props.moveright }>▶</div>
                 </div>
             </Swipeable>            
             <style jsx>{`
@@ -41,6 +41,9 @@ class Slide extends React.Component {
                     height: 15em;
                     display: flex;
                     align-items: center;
+                }
+                .slideContent h1 {
+                    font-size: 120%;
                 }
                 .slideText {
                     width: calc(100% - 20px);
@@ -76,10 +79,10 @@ class Slide extends React.Component {
                     .arrow {
                         width: 15px;
                         height: 100%;
-                        line-height: 10em;
+                        line-height: 20em;
                         padding-left: 3px;
                         padding-right: 3px;
-                        font-size: 20px;
+                        font-size: 12px;
                     }
                 }        
             `}</style>
