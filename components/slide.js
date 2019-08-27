@@ -24,9 +24,13 @@ class Slide extends React.Component {
     }
 
     getShareText(text) {
-        let div = document.createElement("div");
-        div.innerHTML = text
-        return div.textContent || div.innerText || "";
+        if(typeof document !== 'undefined') {
+            let div = document.createElement("div");
+            div.innerHTML = text
+            return div.textContent || div.innerText || "";    
+        } else {
+            return ""
+        }
     }
 
     render() {
