@@ -14,9 +14,12 @@ class Slide extends React.Component {
                     min-width: 30em;
                     margin: 2em;
                     padding: 2em;
+                    background-color: #eee;
+                    opacity: 0.5;
                 }
                 .current {
-                    background: #eee
+                    background-color: #fff;
+                    opacity: 1.0
                 }
             `}</style>
         </div>

@@ -8,11 +8,25 @@ import GoogleMap from '../components/googlemap'
 const slides = [
   {
     title: "I am slide 1",
-    text: "I contain text"
+    text: "I contain text",
+    location: {
+      center: { // trinidad
+        lat: 10.69,
+        lng: -61.7735,  
+      },
+      zoom: 10
+    }    
   },
   {
     title: "I am slide 2",
-    text: "I too contain text"
+    text: "I too contain text",
+    location: {
+      center: { // celementina street
+        lat: 37.77904,
+        lng: -122.4051073
+      },
+      zoom: 18
+    }    
   },
   {
     title: "I am slide 3",
@@ -36,45 +50,49 @@ class Home extends React.Component {
 
   constructor(props) {
     super(props)
-    this.escFunction = this.escFunction.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
     this.state = {
       currentSlide: 0,
       containerMargin: "calc((100% - 36em)/2)"
     }
+    this.googleMapElement = React.createRef()
   }
 
-  escFunction(event) {
+  handleKeyPress(event) {
+    let slideIndex
+    let update = false
     if(event.keyCode === 37) {
       console.log("left!")
-      let slideIndex = this.state.currentSlide - 1
+      update = true
+      slideIndex = this.state.currentSlide - 1
       if (slideIndex < 0) slideIndex = 0
-      this.setState({
-        currentSlide: slideIndex,
-        containerMargin: this.calcMargin(slideIndex)
-      })
     }
     if(event.keyCode === 39) {
       console.log("right!")
-      let slideIndex = this.state.currentSlide + 1
+      update = true
+      slideIndex = this.state.currentSlide + 1
       if (slideIndex >= slides.length) slideIndex = slides.length - 1
+    }
+    if(update) {
       this.setState({
         currentSlide: slideIndex,
         containerMargin: this.calcMargin(slideIndex)
       })
+      this.googleMapElement.current.changeTheMap(slides[slideIndex].location)
+      event.preventDefault()        
     }
   }
 
   calcMargin(index) {
     let margin = "calc( ((100% - 36em)/2) - " + (index*38) + "em)"
-    console.log(margin)
     return margin
   }
 
   componentDidMount(){
-    document.addEventListener("keydown", this.escFunction, false);
+    document.addEventListener("keydown", this.handleKeyPress, false);
   }
   componentWillUnmount(){
-    document.removeEventListener("keydown", this.escFunction, false);
+    document.removeEventListener("keydown", this.handleKeyPress, false);
   }
 
   render() {
@@ -84,7 +102,7 @@ class Home extends React.Component {
       </Head>
 
       <div className="mapWindow">
-        <GoogleMap></GoogleMap>
+        <GoogleMap ref={this.googleMapElement}></GoogleMap>
       </div>
 
       <div className="slideWindow">
@@ -109,6 +127,8 @@ class Home extends React.Component {
         .slideContainer {
           display: flex;
           flex-wrap: nowrap;
+          transition-property: margin-left, background-color, opacity;
+          transition-duration: 0.5s;
         }
         .dummySlide {
           min-width: 30em;
