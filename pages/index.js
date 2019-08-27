@@ -41,7 +41,7 @@ const slides = [
   },
   {
     title: "I am slide 4",
-    text: "I contain text."
+    text: "123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 "
   },
   {
     title: "I am slide 5",
@@ -60,7 +60,6 @@ class Home extends React.Component {
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.state = {
       currentSlide: 0,
-      containerMargin: "calc((100% - 36em)/2)"
     }
     this.googleMapElement = React.createRef()
   }
@@ -69,13 +68,11 @@ class Home extends React.Component {
     let slideIndex
     let update = false
     if(event.keyCode === 37) {
-      console.log("left!")
       update = true
       slideIndex = this.state.currentSlide - 1
       if (slideIndex < 0) slideIndex = 0
     }
     if(event.keyCode === 39) {
-      console.log("right!")
       update = true
       slideIndex = this.state.currentSlide + 1
       if (slideIndex >= slides.length) slideIndex = slides.length - 1
@@ -91,7 +88,8 @@ class Home extends React.Component {
   }
 
   calcMargin(index) {
-    let margin = "calc( ((100% - 36em)/2) - " + (index*38) + "em)"
+    let margin
+    margin = (-window.innerWidth*index)+"px"
     return margin
   }
 
@@ -132,6 +130,7 @@ class Home extends React.Component {
           overflow: hidden;
         }
         .slideContainer {
+          width: 100%;
           display: flex;
           flex-wrap: nowrap;
           transition-property: margin-left, background-color, opacity;
@@ -140,6 +139,10 @@ class Home extends React.Component {
         .dummySlide {
           min-width: 30em;
         }
+        @media only screen 
+        and (max-width : 812px) {
+        }
+        
       `}</style>
     </div>
   }

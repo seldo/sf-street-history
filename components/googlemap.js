@@ -23,8 +23,6 @@ class GoogleMap extends Component {
   }
 
   changeTheMap(newLocation) {
-      console.log("I am trying to change the map")
-      console.log(newLocation)
       this.setState(newLocation)
   }
 
