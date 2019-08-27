@@ -1,8 +1,9 @@
 [
     {
-      "title": "San Francisco",
+      "title": "",
       "text": "This thread starts with the first street, and therefore ignores the Ohlone, who were here for thousands of years before the Spanish showed up and began murdering them in the name of the church. There are no laughs to be had about that shit.",
       "location": {
+        "place": "San Francisco",
         "center": {
           "lat": 10.69,
           "lng": -61.7735
@@ -11,9 +12,10 @@
       }    
     },
     {
-      "title": "Clementina Street",
-      "text": "Something about this place",
+      "title": "",
+      "text": "The very first things to be built in San Francisco were a military installation at Fort Point in the Presidio and the Mission San Francisco de Asís itself. This created a complicated chain of names.",
       "location": {
+        "place": "Clementina Street",
         "center": {
           "lat": 37.77904,
           "lng": -122.4051073
@@ -26,8 +28,9 @@
       "text": "I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. ",
       "location": {
         "center": {
-          "lat": 37.786941,
-          "lng": -122.425046
+            "place": "Gough Street",
+            "lat": 37.786941,
+            "lng": -122.425046
         },
         "zoom": 18
       }

@@ -11,6 +11,9 @@ class Home extends React.Component {
   constructor(props) {
     super(props)
     this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.moveSlide = this.moveSlide.bind(this)
+    this.handleSlideClickLeft = this.handleSlideClickLeft.bind(this)
+    this.handleSlideClickRight = this.handleSlideClickRight.bind(this)
     this.state = {
       currentSlide: 0,
     }
@@ -18,26 +21,41 @@ class Home extends React.Component {
   }
 
   handleKeyPress(event) {
-    let slideIndex
-    let update = false
+    let caught = false
     if(event.keyCode === 37) {
-      update = true
+      caught = true
+      this.moveSlide('left')
+    }
+    if(event.keyCode === 39) {
+      caught = true
+      this.moveSlide('right')
+    }
+    if (caught) event.preventDefault()
+  }
+
+  handleSlideClickLeft() {
+    this.moveSlide('left')
+  }
+
+  handleSlideClickRight() {
+    this.moveSlide('right')
+  }
+
+  moveSlide(direction) {
+    let slideIndex
+    if(direction == 'left') {
       slideIndex = this.state.currentSlide - 1
       if (slideIndex < 0) slideIndex = 0
     }
-    if(event.keyCode === 39) {
-      update = true
+    if(direction == 'right') {
       slideIndex = this.state.currentSlide + 1
       if (slideIndex >= slides.length) slideIndex = slides.length - 1
     }
-    if(update) {
-      this.setState({
-        currentSlide: slideIndex,
-        containerMargin: this.calcMargin(slideIndex)
-      })
-      this.googleMapElement.current.changeTheMap(slides[slideIndex].location)
-      event.preventDefault()        
-    }
+    this.setState({
+      currentSlide: slideIndex,
+      containerMargin: this.calcMargin(slideIndex)
+    })
+    this.googleMapElement.current.changeTheMap(slides[slideIndex].location)
   }
 
   calcMargin(index) {
@@ -67,7 +85,7 @@ class Home extends React.Component {
         <div className="slideContainer" style={{marginLeft: this.state.containerMargin}}>
           {slides.map( (slide,index) => {
             let isCurrent = (index == this.state.currentSlide)
-            return <Slide slide={slide} isCurrent={isCurrent} key={index}></Slide>
+            return <Slide slide={slide} isCurrent={isCurrent} key={index} moveleft={this.handleSlideClickLeft} moveright={this.handleSlideClickRight}></Slide>
           })}
           <div className="dummySlide"></div>
         </div>
