@@ -17,7 +17,7 @@ class Slide extends React.Component {
 
     getShareURL() {
         if(typeof window !== 'undefined') {
-            return window.location.protocol + "://" + window.location.hostname + Router.asPath        
+            return window.location.protocol + "//" + window.location.hostname + Router.asPath        
         } else {
             return "https://sf-street-history.seldo.now.sh/"
         }
