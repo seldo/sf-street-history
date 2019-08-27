@@ -7,8 +7,8 @@ import GoogleMap from '../components/googlemap'
 
 const slides = [
   {
-    title: "I am slide 1",
-    text: "I contain text",
+    title: "San Francisco",
+    text: "I am the first slide.",
     location: {
       center: { // trinidad
         lat: 10.69,
@@ -18,8 +18,8 @@ const slides = [
     }    
   },
   {
-    title: "I am slide 2",
-    text: "I too contain text",
+    title: "Clementina Street",
+    text: "Something about this place",
     location: {
       center: { // celementina street
         lat: 37.77904,
@@ -29,8 +29,15 @@ const slides = [
     }    
   },
   {
-    title: "I am slide 3",
-    text: "I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. "
+    title: "Gough Street",
+    text: "I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. ",
+    location: {
+      center: {
+        lat: 37.786941,
+        lng: -122.425046
+      },
+      zoom: 18
+    }
   },
   {
     title: "I am slide 4",
