@@ -1,7 +1,7 @@
 [
     {
         "title": "San Francisco's History in Street Names",
-        "text": "This is an extremely condensed history of San Francisco, focused on how various streets got their names. Each factoid is intentionally tweet-sized!",
+        "text": "This is an extremely condensed history of San Francisco, focused on how various streets got their names. Each factoid is intentionally tweet-sized! You can tap or swipe to go forward and back, or using left and right keys on a desktop.",
         "location": {
             "place": "San Francisco",
             "center": {
@@ -393,6 +393,114 @@
                 "lng": -122.468927
             },
             "zoom": 17
+        }
+    },
+    {
+        "title": "",
+        "text": "In the 1860s they tried to name a town after Ralston but he modestly refused, so instead they decided to name it after his modesty -- hence the town of Modesto, California. (Ralston Street in SF came much later)",
+        "location": {
+            "place": "Modesto, CA",
+            "center": {
+                "lat": 37.637105, 
+                "lng": -120.996722
+            },
+            "zoom": 8
+        }
+    },    
+    {
+        "title": "",
+        "text": "In 1865 Adolph Sutro arrived and told Ralston he could build a tunnel to help him get the silver out more cheaply and safely. The tunnel took forever to build and by the time it was done the silver was all mined out, but selling stock in the tunnel itself made Sutro very rich.",
+        "location": {
+            "place": "Sutro Tower was built in 1973 on land owned by his grandson",
+            "center": {
+                "lat": 37.755370, 
+                "lng": -122.452134
+            },
+            "zoom": 17
+        }
+    },    
+    {
+        "title": "",
+        "text": "William Ralston was also the force behind the creation of the Golden Gate Park, a totally artificial creation built on top of sand dunes by William Hammond Hall. It is 20% larger than New York's Central Park, a deliberate move to out-do New York.",
+        "location": {
+            "place": "Golden Gate Park",
+            "center": {
+                "lat": 37.769324, 
+                "lng": -122.484099
+            },
+            "zoom": 14
+        }
+    },    
+    {
+        "title": "",
+        "text": "Water was a real problem for Golden Gate Park, solved in 1902 by constructing windmills to power pumps, in case you've ever wondered why there are two random windmills in the park. They no longer pump water.",
+        "location": {
+            "place": "Golden Gate Park windmills",
+            "center": {
+                "lat": 37.770108, 
+                "lng": -122.509460
+            },
+            "zoom": 16
+        }
+    },    
+    {
+        "title": "",
+        "text": "Also in Golden Gate Park is the De Young Museum, rebuilt in 2005. The original was built, along with the music concourse and the Japanese Tea Garden at the same spot, as part of the 1893 California Midwinter International Exposition. The park's superintendent hated all three.",
+        "location": {
+            "place": "De Young Museum",
+            "center": {
+                "lat": 37.770883, 
+                "lng": -122.46833
+            },
+            "zoom": 16
+        }
+    },    
+    {
+        "title": "",
+        "text": "De Young was the owner of the San Francisco Chronicle, and also built the Chronicle Building, which in 1890 at 10(!) stories was San Francisco's first \"skyscraper\" and the tallest building on the West Coast.",
+        "location": {
+            "place": "Old Chronicle Building",
+            "center": {
+                "lat": 37.788130, 
+                "lng": -122.403006
+            },
+            "zoom": 19
+        }
+    },    
+    {
+        "title": "",
+        "text": "Judah Street, home of the N-Judah Muni line, is appropriately named after Theodora Dehone Judah, who built California's first railroad in 1856. He also built the transcontinental railroad linking the east and west coasts, but died before it was finished.",
+        "location": {
+            "place": "Judah Street",
+            "center": {
+                "lat": 37.761211, 
+                "lng": -122.488051
+            },
+            "zoom": 17
+        }
+    },    
+    {
+        "title": "Yikes",
+        "text": "That's it for now! I'll add more streets to the history later. I haven't even got to the wacky names of the streets in the Sunset.",
+        "location": {
+            "place": "The Outer Sunset",
+            "center": {
+                "lat": 37.752308, 
+                "lng": -122.494074
+            },
+            "zoom": 13
+        }
+    },    
+    {
+        "title": "Sources",
+        "text": "My primary source is A Short History of San Francisco by Tom Cole, which is both excellent and, indeed, very short. I recommend it. Another absolutely wonderful resource is this interactive map of SF streets with their names: <a href=\"http://sfstreets.noahveltman.com/\">sfstreets.noahveltman.com</a>.",
+        "location": {
+            "place": "San Francisco",
+            "center": {
+                "lat": 37.765550,
+                "lng": -122.447558
+            },
+            "zoom": 5
         }
     }
 ]
