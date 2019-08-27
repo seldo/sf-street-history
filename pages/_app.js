@@ -33,6 +33,11 @@ export default class MyApp extends App {
                         name="twitter:site"
                         content={DEFAULT_SEO.twitter.handle}
                     />
+                    <meta 
+                        key="twitter:image"
+                        name="twitter:image" 
+                        content={DEFAULT_SEO.openGraph.image}
+                    />
                     <meta
                         key="og:url"
                         property="og:url"
@@ -57,16 +62,6 @@ export default class MyApp extends App {
                         key="og:image"
                         property="og:image"
                         content={DEFAULT_SEO.openGraph.image}
-                    />
-                    <meta
-                        key="og:image:width"
-                        property="og:image:width"
-                        content={DEFAULT_SEO.openGraph.imageWidth}
-                    />
-                    <meta
-                        key="og:image:height"
-                        property="og:image:height"
-                        content={DEFAULT_SEO.openGraph.imageHeight}
                     />
                     <meta
                         key="og:locale"

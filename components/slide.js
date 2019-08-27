@@ -30,7 +30,7 @@ class Slide extends React.Component {
                     min-width: 100%;
                     padding-left: 20%;
                     padding-right: 20%;
-                    font-family: Verdana;
+                    font-family: sans-serif;
                 }
                 .slideContent {
                     box-sizing: border-box;
@@ -38,9 +38,10 @@ class Slide extends React.Component {
                     padding-bottom: 10px;
                     background-color: #eee;
                     opacity: 0.5;
-                    height: 15em;
                     display: flex;
                     align-items: center;
+                    border: 8px double black;
+                    border-radius: 1em;
                 }
                 .slideContent h1 {
                     font-size: 120%;
@@ -58,6 +59,7 @@ class Slide extends React.Component {
                     padding-left: 0.5em;
                     padding-right: 0.5em;
                     font-size: 40px;
+                    cursor: pointer;
                 }
                 .current {
                     background-color: #fff;
@@ -71,6 +73,9 @@ class Slide extends React.Component {
                     }
                     .slideContent {
                         height: 15em;
+                        border-radius: 0;
+                        border: 0px;
+                        border-top: 1px solid black;
                     }
                     .slideText {
                         padding-left: 0.5em;
