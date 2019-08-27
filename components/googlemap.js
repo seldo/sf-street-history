@@ -1,7 +1,26 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
-const Marker = ({ text }) => <div className="marker">{text}</div>;
+class Marker extends Component {
+    render() {
+        if(this.props.text) {
+            return <div className="marker">
+                {this.props.text}
+                <style jsx>{`
+                    .marker {
+                        background-color: #fff;
+                        padding: 1em;
+                        display: inline-block;
+                        border-radius: 5px;
+                        border: 2px solid #aab;
+                    }
+                `}</style>
+            </div>
+        } else {
+            return <span></span>
+        }
+    }
+}
 
 class GoogleMap extends Component {
 
@@ -23,7 +42,10 @@ class GoogleMap extends Component {
   }
 
   changeTheMap(newLocation) {
-      this.setState(newLocation)
+      if(newLocation) {
+        if(!newLocation.place) newLocation.place = null
+        this.setState(newLocation)  
+      }
   }
 
   render() {
@@ -37,6 +59,7 @@ class GoogleMap extends Component {
           center={this.state.center}
           zoom={this.state.zoom}
         >
+            <Marker text={this.state.place}></Marker>
         </GoogleMapReact>
 
         <style jsx>{`

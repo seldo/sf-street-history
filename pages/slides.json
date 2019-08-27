@@ -13,7 +13,7 @@
       },
       {
       "title": "",
-      "text": "This app was thrown together in six hours, and the content in even less time. It is not complete, comprehensive or even necessarily accurate. I'm not a real historian, I read history for the laughs.<br><br>I'm <a href=\"https://twitter.com/seldo\">@seldo</a> on Twitter and you can direct your cries of outrage there.",
+      "text": "This app was thrown together in five hours, and the content in even less time. It is not complete, comprehensive or even necessarily accurate. I'm not a real historian, I read history for the laughs.<br><br>I'm <a href=\"https://twitter.com/seldo\">@seldo</a> on Twitter and you can direct your cries of outrage there.",
       "location": {
         "place": "San Francisco",
         "center": {
@@ -24,13 +24,13 @@
       }    
     },
     {
-      "title": "",
-      "text": "The very first things to be built in San Francisco were a military installation at Fort Point in the Presidio and the Mission San Francisco de Asís itself. This created a complicated chain of names.",
+      "title": "Disclaimer",
+      "text": "This history is about streets, and therefore ignores the Ohlone, who were here for thousands of years before the Spanish showed up and began murdering them in the name of the church. There are no laughs to be had about that shit, and they did not build any streets to map.",
       "location": {
-        "place": "Clementina Street",
+        "place": "Ohlone Way",
         "center": {
-          "lat": 37.77904,
-          "lng": -122.4051073
+          "lat": 37.7365167,
+          "lng": -122.4360941
         },
         "zoom": 18
       }    
