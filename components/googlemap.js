@@ -26,8 +26,8 @@ class GoogleMap extends Component {
 
   static defaultProps = {
     center: {
-      lat: 37.772224,
-      lng: -122.441153
+      lat: 37.765550,
+      lng: -122.447558
     },
     zoom: 13
   };
