@@ -44,6 +44,9 @@ class GoogleMap extends Component {
   changeTheMap(newLocation) {
       if(newLocation) {
         if(!newLocation.place) newLocation.place = null
+        // the map doesn't seem to center things very well so we do this
+        newLocation.center.lat = newLocation.center.lat - 0.0001
+        newLocation.center.lng = newLocation.center.lng + 0.001
         this.setState(newLocation)  
       }
   }

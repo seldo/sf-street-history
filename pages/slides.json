@@ -10,7 +10,7 @@
           },
           "zoom": 13
         }    
-      },
+      },      
       {
       "title": "",
       "text": "This app was thrown together in five hours, and the content in even less time. It is not complete, comprehensive or even necessarily accurate. I'm not a real historian, I read history for the laughs.<br><br>I'm <a href=\"https://twitter.com/seldo\">@seldo</a> on Twitter and you can direct your cries of outrage there.",
@@ -34,6 +34,18 @@
         },
         "zoom": 18
       }    
+    },
+    {
+        "title": "Pegman!",
+        "text": "You can drag the little yellow guy in the top left and get a street-level view of any of the places this app takes you. Try it now to see the TransAmerica building!",
+        "location": {
+            "place": "TransAmerica Pyramid",
+            "center": {
+            "lat": 37.7951775,
+            "lng": -122.4049674
+            },
+            "zoom": 18
+        }    
     },
     {
       "title": "Gough Street",
