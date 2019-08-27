@@ -72,7 +72,6 @@ class Street extends React.Component {
 
   componentDidMount(){
     document.addEventListener("keydown", this.handleKeyPress, false);
-    console.log(`setting container margin to ${this.state.currentSlide}`)
     this.setState({
         containerMargin: this.calcMargin(this.state.currentSlide)
     })
@@ -102,6 +101,11 @@ class Street extends React.Component {
         </div>
       </div>
 
+      <style jsx global>{`
+        body { 
+            overflow: hidden;
+        }
+      `}</style>
       <style jsx>{`
         .slideWindow {
           position: absolute;

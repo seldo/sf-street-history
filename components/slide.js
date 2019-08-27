@@ -1,5 +1,8 @@
 import React from 'react'
-import { useSwipeable, Swipeable } from 'react-swipeable'
+import { Swipeable } from 'react-swipeable'
+import { TwitterShareButton, TwitterIcon } from 'react-share'
+import Router from 'next/router'
+import { isAbsolute } from 'path';
 
 class Slide extends React.Component {
 
@@ -12,6 +15,20 @@ class Slide extends React.Component {
         this.props.moveright()
     }
 
+    getShareURL() {
+        if(typeof window !== 'undefined') {
+            return window.location.protocol + "://" + window.location.hostname + Router.asPath        
+        } else {
+            return "https://sf-street-history.seldo.now.sh/"
+        }
+    }
+
+    getShareText(text) {
+        let div = document.createElement("div");
+        div.innerHTML = text
+        return div.textContent || div.innerText || "";
+    }
+
     render() {
         return <div className="slide">
             <Swipeable onSwipedRight={ this.props.moveleft } onSwipedLeft={ this.props.moveright }>
@@ -21,6 +38,9 @@ class Slide extends React.Component {
                         <h1>{ this.props.slide.title }</h1>
                         <p dangerouslySetInnerHTML={ {__html: this.props.slide.text} }></p>
                     </div>
+                    <TwitterShareButton url={this.getShareURL()} className="twitterButton" style={{position:'absolute',bottom:'1em',right:'1em'}} title={ this.getShareText(this.props.slide.text) }>
+                        <TwitterIcon size={32} round={true} />
+                    </TwitterShareButton>
                     <div className="arrow" onClick={ this.props.moveright }>▶</div>
                 </div>
             </Swipeable>            
@@ -42,6 +62,7 @@ class Slide extends React.Component {
                     align-items: center;
                     border: 8px double black;
                     border-radius: 1em;
+                    position: relative;
                 }
                 .slideContent h1 {
                     font-size: 120%;
