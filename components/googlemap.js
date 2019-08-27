@@ -48,12 +48,22 @@ class GoogleMap extends Component {
       }
   }
 
+  createMapOptions(maps) {
+    return {
+        streetViewControl: true,
+        streetViewControlOptions: {
+            position: google.maps.ControlPosition.LEFT_TOP
+        }        
+    }
+  }
+
   render() {
     return (
       // Important! Always set the container height explicitly
       <div className="map" style={{ height: '100%', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyBc4iaq2Er5spX5vi-ZZYcneWfafUu-19E" }}
+          options={this.createMapOptions}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           center={this.state.center}
