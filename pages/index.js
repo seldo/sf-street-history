@@ -4,54 +4,7 @@ import Head from 'next/head'
 import Nav from '../components/nav'
 import Slide from '../components/slide'
 import GoogleMap from '../components/googlemap'
-
-const slides = [
-  {
-    title: "San Francisco",
-    text: "I am the first slide.",
-    location: {
-      center: { // trinidad
-        lat: 10.69,
-        lng: -61.7735,  
-      },
-      zoom: 10
-    }    
-  },
-  {
-    title: "Clementina Street",
-    text: "Something about this place",
-    location: {
-      center: { // celementina street
-        lat: 37.77904,
-        lng: -122.4051073
-      },
-      zoom: 18
-    }    
-  },
-  {
-    title: "Gough Street",
-    text: "I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. I contain lots of text. ",
-    location: {
-      center: {
-        lat: 37.786941,
-        lng: -122.425046
-      },
-      zoom: 18
-    }
-  },
-  {
-    title: "I am slide 4",
-    text: "123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 "
-  },
-  {
-    title: "I am slide 5",
-    text: "I contain text."
-  },
-  {
-    title: "I am slide 6",
-    text: "I contain text."
-  },
-]
+import slides from './slides.json'
 
 class Home extends React.Component {
 
@@ -141,6 +94,9 @@ class Home extends React.Component {
         }
         @media only screen 
         and (max-width : 812px) {
+          .slideWindow {
+            top: calc(100% - 15em);            
+          }
         }
         
       `}</style>

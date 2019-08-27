@@ -7,9 +7,6 @@ class Slide extends React.Component {
             <div className={"slideContent " + (this.props.isCurrent && "current")}>
                 <h1>{ this.props.slide.title }</h1>
                 <p>{ this.props.slide.text }</p>
-                { this.props.isCurrent && 
-                    <div>I'm the current slide</div>
-                }
             </div>
             <style jsx>{`
                 .slide {
@@ -17,6 +14,7 @@ class Slide extends React.Component {
                     min-width: 100%;
                     padding-left: 20%;
                     padding-right: 20%;
+                    font-family: Verdana;
                 }
                 .slideContent {
                     box-sizing: border-box;
@@ -26,6 +24,7 @@ class Slide extends React.Component {
                     padding-bottom: 10px;
                     background-color: #eee;
                     opacity: 0.5;
+                    height: 15em;
                 }
                 .current {
                     background-color: #fff;
@@ -34,11 +33,11 @@ class Slide extends React.Component {
                 @media only screen 
                 and (max-width : 812px) {
                     .slide {
-                        padding-left: 1em;
-                        padding-right: 1em;
+                        padding-left: 0px;
+                        padding-right: 0px;
                     }
                     .slideContent {
-
+                        height: 15em;
                     }
                 }        
             `}</style>
