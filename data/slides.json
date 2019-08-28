@@ -85,7 +85,19 @@
  },
  {
   "title": "",
-  "text": "But the original mission wasn't on Mission or Dolores! It was at Albion and Camp streets, two blocks away. There's a plaque. Albion Street is named after Nova Albion, which is what Francis Drake had called California when he sailed by in 1579 and failed to spot San Franciso bay.",
+  "text": "Church Street is also named for the Mission church, making it the third street to be named after the same Mission, but the original Mission building wasn't on any of those streets!",
+  "location": {
+   "place": "Church Street",
+   "center": {
+    "lat": 37.76451,
+    "lng": -122.428654
+   },
+   "zoom": 18
+  }
+ },
+ {
+  "title": "",
+  "text": "Not on Mission, Dolores or Church, the original Mission was at Albion and Camp streets. There's a plaque. Albion Street is named after Nova Albion, which is what Francis Drake had called California when he sailed by in 1579 and entirely failed to spot San Franciso bay.",
   "location": {
    "place": "Original Mission plaque",
    "center": {
@@ -169,6 +181,18 @@
  },
  {
   "title": "",
+  "text": "The last Mexican alcalde (kind of like a mayor) of San Francisco before the Americans stole California was José de Jesús Noé, so why we pronounce it \"No-ee\" instead of \"No-eh\" is a mystery.",
+  "location": {
+   "place": "Noe Street",
+   "center": {
+    "lat": 37.751435,
+    "lng": -122.431899
+   },
+   "zoom": null
+  }
+ },
+ {
+  "title": "",
   "text": "In July 1846, 238 Mormons showed up in San Francisco, doubling its population. They had been fleeing persecution by the US government, so were very disappointed to discover that while en route their destination had become part of the USA, but they decided to stay anyway.",
   "location": {
    "place": "Mormon Church",
@@ -193,7 +217,7 @@
  },
  {
   "title": "",
-  "text": "The guy who renamed Yerba Buena to San Franciso was Washington A Bartlett, the first American appointed alcalde (kind of like a mayor) of the town. He thought naming the town after the bay would be good for establishing it as the major town in the region, and he was right.",
+  "text": "The guy who renamed Yerba Buena to San Franciso was Washington A Bartlett, the first American appointed alcalde of the town. He thought naming the town after the bay would be good for establishing it as the major town in the region, and he was right.",
   "location": {
    "place": "Bartlett Street",
    "center": {
