@@ -25,4 +25,4 @@ const csv = convertArrayToCSV(flattened, {
     ]
 })
 
-fs.writeFileSync("./slides.csv",csv)
+fs.writeFileSync("./SF Street History - slides.csv",csv)
