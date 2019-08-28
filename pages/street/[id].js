@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Router from 'next/router'
 import Slide from '../../components/slide'
 import GoogleMap from '../../components/googlemap'
-import slides from '../slides.json'
+import slides from '../../data/slides.json'
 
 class Street extends React.Component {
 
