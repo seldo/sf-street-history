@@ -5,7 +5,7 @@ class Marker extends Component {
     render() {
         if(this.props.text) {
             return <div className="marker">
-                {this.props.text}
+                <span dangerouslySetInnerHTML={ {__html: this.props.text} }></span>
                 <style jsx>{`
                     .marker {
                         background-color: #fff;
@@ -44,7 +44,6 @@ class GoogleMap extends Component {
   changeTheMap(newLocation) {
       if(newLocation) {
         if(!newLocation.place) newLocation.place = null
-        // the map doesn't seem to center things very well so we do this
         newLocation.center.lat = newLocation.center.lat
         newLocation.center.lng = newLocation.center.lng
         this.setState(newLocation)  
