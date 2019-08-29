@@ -109,7 +109,31 @@
  },
  {
   "title": "",
-  "text": "The first permanent habitation and oldest street location in San Francisco is 827-843 Grant Avenue (then called Calle de la Fundación), where William Richardson, a whaling captain, set up a trading business after marrying the daughter of the commander of the Presidio in 1835.",
+  "text": "San Francisco began existence in 1835 when ship owners petitioned the governor of California to create an official port to take advantage of the safe and easy anchorage at Yerba Buena Cove. The cove has long since been filled and land created far past the original coastline.",
+  "location": {
+   "place": "Approximate location of<br>Yerba Buena Cove",
+   "center": {
+    "lat": 37.794683,
+    "lng": -122.403178
+   },
+   "zoom": 17
+  }
+ },
+ {
+  "title": "",
+  "text": "Yerba Buena's first alcalde, a sort of combination of a judge and a mayor, was Francisco de Haro. He laid out its very first street, called Calle de la Fundación, starting at the current corner of Kearny and Pine but running mostly along what's now Grant Avenue.",
+  "location": {
+   "place": "Start of Calle de la Fundación",
+   "center": {
+    "lat": 37.791689,
+    "lng": -122.404269
+   },
+   "zoom": 17
+  }
+ },
+ {
+  "title": "",
+  "text": "The first permanent habitation in San Francisco was 827-843 Grant Avenue, where William Richardson, a whaling captain, set up a trading business after marrying the daughter of the commander of the Presidio in 1835. There's no sign or anything to indicate this.",
   "location": {
    "place": "827 Grant Avenue",
    "center": {
@@ -121,12 +145,12 @@
  },
  {
   "title": "",
-  "text": "I haven't found anything on Grant Avenue that indicates it's the oldest anything. San Francisco (called Yerba Buena at that time) remained small and quiet until 1846, when John Charles Frémont decided that California should be annexed by America from Mexico and invaded.",
+  "text": "Much later, de Haro got a street named for him, but he should probably be more famous. Yerba Buena remained small and quiet until 1846, when John Charles Frémont decided that California should be annexed by America from Mexico and invaded.",
   "location": {
-   "place": "827 Grant Avenue",
+   "place": "De Haro Street",
    "center": {
-    "lat": 37.794678,
-    "lng": -122.406392
+    "lat": 37.7604,
+    "lng": -122.401176
    },
    "zoom": 18
   }
@@ -169,7 +193,7 @@
  },
  {
   "title": "",
-  "text": "Of course, Frémont was still not part of the army, so this was awkward and eventually the US sent some troops from the Mexican-American war (which had started a month earlier) and officially took over California with a nominal force of 70 soliders and marines.",
+  "text": "Of course, Frémont was still not part of the army, so this was awkward and eventually in July 1846 the US sent some troops from the Mexican-American war (which had started a month earlier) and officially took over California with a nominal force of 70 soliders and marines.",
   "location": {
    "place": "Admission Day statue<br>Commemorating California<br>becoming part of the US",
    "center": {
@@ -181,19 +205,19 @@
  },
  {
   "title": "",
-  "text": "The last Mexican alcalde (kind of like a mayor) of San Francisco before the Americans stole California was José de Jesús Noé, so why we pronounce it \"No-ee\" instead of \"No-eh\" is a mystery.",
+  "text": "The last Mexican alcalde before the Americans stole California was José de Jesús Noé. Why we pronounce it \"No-ee\" instead of \"No-eh\" is a mystery. We also mis-pronounce \"Guerrero\", also named for a former alcalde, who was killed in a \"drive-by\" involving a slingshot and a horse.",
   "location": {
    "place": "Noe Street",
    "center": {
     "lat": 37.751435,
     "lng": -122.431899
    },
-   "zoom": null
+   "zoom": 17
   }
  },
  {
   "title": "",
-  "text": "In July 1846, 238 Mormons showed up in San Francisco, doubling its population. They had been fleeing persecution by the US government, so were very disappointed to discover that while en route their destination had become part of the USA, but they decided to stay anyway.",
+  "text": "Also in July 1846, 238 Mormons showed up in San Francisco, doubling its population. They had been fleeing persecution by the US government, so were very disappointed to discover that while en route their destination had become part of the USA, but decided to stay anyway.",
   "location": {
    "place": "Mormon Church",
    "center": {
@@ -205,7 +229,7 @@
  },
  {
   "title": "",
-  "text": "In this group was Sam Brannan, who quickly abandoned strict Mormon ways and became very rich selling mining supplies during the gold rush (of which more in a second). He also campaigned vociferously against changing Yerba Buena's name to San Francisco:",
+  "text": "In this group was Sam Brannan, who quickly abandoned strict Mormon ways and became very rich selling mining supplies during the gold rush (of which more in a second). He also campaigned vociferously against changing Yerba Buena's name to San Francisco.",
   "location": {
    "place": "Brannan Street",
    "center": {
@@ -241,7 +265,7 @@
  },
  {
   "title": "",
-  "text": "After San Francisco took the name, Larkin used the general's wife's second name, Benicia, a town that still exists.",
+  "text": "After San Francisco took the name, Larkin used the general's wife's second name, Benicia, a town that still exists (right next to the town of Vallejo, named for the general himself).",
   "location": {
    "place": "Benicia",
    "center": {
@@ -272,7 +296,7 @@
     "lat": 37.797861,
     "lng": -122.402112
    },
-   "zoom": 13
+   "zoom": 16
   }
  },
  {
@@ -289,7 +313,7 @@
  },
  {
   "title": "",
-  "text": "But before that happened, the gold rush had to happen. John Sutter was trying to build a lumber mill near Coloma and hired a guy called James Marshall to do it.",
+  "text": "But before that happened, the gold rush had to happen. John Sutter was trying to build a lumber mill near Coloma and hired a guy called James Marshall to do it. The lumber mill used a water wheel for power, and while building it Marshall noticed gold lying in the stream bed.",
   "location": {
    "place": "James Marshall monument at Coloma",
    "center": {
@@ -301,7 +325,7 @@
  },
  {
   "title": "",
-  "text": "Both Sutter and Marshall made nothing from the gold rush. Sutter had been granted the land by the Mexican government before the annexation but everybody just ignored that and claimed it for themselves.",
+  "text": "Neither Sutter nor Marshall made much money in the gold rush. Sutter had been granted his land by the Mexican government before the annexation but everybody just ignored that and claimed it for themselves.",
   "location": {
    "place": "Sutter Street",
    "center": {
@@ -313,19 +337,19 @@
  },
  {
   "title": "",
-  "text": "The gold rush saw San Francisco explode in size from 459 people in 1847 to 30,000 in 1849 and 150,000 by 1870 and 342,000 by 1900. People made money mining gold but also in lots of nefarious ways.",
+  "text": "Absurd numbers of people showed up for the subsequent gold rush. San Francisco exploded in size from 459 people in 1847 to 30,000 in 1849 and 150,000 by 1870 and 342,000 by 1900. Wells Fargo was founded as a stagecoach company to help carry gold dust around.",
   "location": {
-   "place": "Sutter Street",
+   "place": "Wells Fargo Museum",
    "center": {
-    "lat": 37.787251,
-    "lng": -122.424196
+    "lat": 37.793402,
+    "lng": -122.402697
    },
    "zoom": 13
   }
  },
  {
   "title": "",
-  "text": "David Broderick literally made money by inventing a standardized gold currency for San Francisco (there wasn't enough paper money) and profited by selling $4 worth of gold as a $5 coin.",
+  "text": "People made money mining gold, but also in lots of nefarious ways. David Broderick literally made money by inventing a standardized gold currency for San Francisco (there wasn't enough paper money) and profited by selling $4 worth of gold as a $5 coin.",
   "location": {
    "place": "Broderick Street",
    "center": {
@@ -361,7 +385,7 @@
  },
  {
   "title": "",
-  "text": "In 1849 John W Geary was elected as San Francisco's last alcalde and its first mayor.",
+  "text": "In 1849 John W Geary was elected as San Francisco's last alcalde and its first American-style mayor. He later moved back east and became governor of Kansas, before it became a state.",
   "location": {
    "place": "Geary Street (and also Boulevard)",
    "center": {
@@ -385,7 +409,55 @@
  },
  {
   "title": "",
-  "text": "In 1851 gold rush money and explosive growth had turned SF into a lawless town. Sam Brannan showed up again, creating a Committee of Vigilance to find and summarily hang criminals. Members of the Vigilance Committee is the origin of the word \"vigilante\".",
+  "text": "Between December 1849 and June 1851, San Francisco burned to the ground 7 times. There was no fire department, there was little water and the town was mostly tents, or canvas walls stretched over wood frames, so fires started easily and were hard to put out.",
+  "location": {
+   "place": "Starting point of<br>fire of 1851",
+   "center": {
+    "lat": 37.794806,
+    "lng": -122.405606
+   },
+   "zoom": 17
+  }
+ },
+ {
+  "title": "",
+  "text": "But several of the fires were intentional. There's evidence the arsonists had figured out that the gold stored all over town would melt but not burn, and they could come along after the fire and scoop it out of the ashes. A breathtakingly lazy and evil strategy!",
+  "location": {
+   "place": "Southeast limit of<br>fire of 1851",
+   "center": {
+    "lat": 37.792262,
+    "lng": -122.3998
+   },
+   "zoom": 17
+  }
+ },
+ {
+  "title": "",
+  "text": "Because the town was mostly tents, it was very quickly rebuilt after each fire. The biggest of the 7 fires, in 1851, destroyed three quarters of the town, some 2000 buildings. San Francisco finally got around to forming a fire department.",
+  "location": {
+   "place": "Northeast limit of<br>fire of 1851",
+   "center": {
+    "lat": 37.79873,
+    "lng": -122.39989
+   },
+   "zoom": 17
+  }
+ },
+ {
+  "title": "",
+  "text": "In 1851 a 7 year old called Lillie Coit moved to SF. She was fascinated by firefighters and would run alongside fire engines (then pulled by men) and cheer them on as they struggled to get up steep hills. She left money to San Francisco, which built Coit Tower with it.",
+  "location": {
+   "place": "Coit Tower",
+   "center": {
+    "lat": 37.802365,
+    "lng": -122.405822
+   },
+   "zoom": 17
+  }
+ },
+ {
+  "title": "",
+  "text": "Arson was just one aspect of San Francisco's lawless nature at that time. Sam Brannan showed up again, creating a Committee of Vigilance to find and summarily hang criminals. Members of the Vigilance Committee were called \"vigilantes\", which is the origin of that word.",
   "location": {
    "place": "The site of \"Fort Gunnybags\", their HQ.",
    "center": {
@@ -393,6 +465,18 @@
     "lng": -122.405032
    },
    "zoom": 18
+  }
+ },
+ {
+  "title": "",
+  "text": "The sudden population explosion in the gold rush was almost entirely men, leading to a boom in business for sex workers. Cora Street is one of two streets in San Francisco named for famous sex workers. Belle Cora was a famous madam in the 1850s.",
+  "location": {
+   "place": "Cora Street",
+   "center": {
+    "lat": 37.71146,
+    "lng": -122.408963
+   },
+   "zoom": 17
   }
  },
  {
@@ -409,7 +493,19 @@
  },
  {
   "title": "",
-  "text": "By 1863 the gold rush was mostly over but William Chapman Ralston discovered that instead of gold there was an enormous amount of silver in the famous Comstock mine and made a fortune getting it out. ",
+  "text": "Minna Street is also named for a sex worker, Minna (or Minnie) Rae. She met Mark Twain, and Emperor Norton dubbed her the \"little countess\". Her life is unlikely to have been a fun story: she started working at age 9 and was pregnant by age 11.",
+  "location": {
+   "place": "Minna Street",
+   "center": {
+    "lat": 37.779366,
+    "lng": -122.409685
+   },
+   "zoom": 17
+  }
+ },
+ {
+  "title": "",
+  "text": "By 1863 the gold rush was mostly over but William Chapman Ralston discovered that instead of gold there was an enormous amount of silver in the famous Comstock mine (located in what is now Nevada) and made a fortune getting it out. ",
   "location": {
    "place": "Ralston Street",
    "center": {
@@ -435,12 +531,24 @@
   "title": "",
   "text": "In 1865 Adolph Sutro arrived and told Ralston he could build a tunnel to help him get the silver out more cheaply and safely. The tunnel took forever to build and by the time it was done the silver was all mined out, but selling stock in the tunnel itself made Sutro very rich.",
   "location": {
-   "place": "Sutro Tower was built in 1973 on land owned by his grandson",
+   "place": "Sutro Tower was built in 1973<br>on land owned by his grandson",
    "center": {
     "lat": 37.75537,
     "lng": -122.452134
    },
    "zoom": 17
+  }
+ },
+ {
+  "title": "",
+  "text": "Sutro used his money to build Sutro Baths, the largest indoor swimming facility in the world when it was built in 1896. Until they burned down in 1966, they were next to the Cliff House, which Sutro also owned at the time.",
+  "location": {
+   "place": "Ruins of Sutro Baths",
+   "center": {
+    "lat": 37.780148,
+    "lng": -122.51408
+   },
+   "zoom": null
   }
  },
  {
@@ -493,6 +601,42 @@
  },
  {
   "title": "",
+  "text": "The creation of Golden Gate Park boosted settlement in the Sunset, which until then was mostly just sand dunes known as \"Outside Lands\" (hence the name of the music festival).",
+  "location": {
+   "place": "The Outer Sunset",
+   "center": {
+    "lat": 37.752308,
+    "lng": -122.494074
+   },
+   "zoom": 17
+  }
+ },
+ {
+  "title": "",
+  "text": "Most of the streets in the Sunset (and the Richmond) were laid out in the early 1900s. Many are named after members of expeditions led by Juan Bautista de Anza, who in the 1700s was sent by Spain to map and colonize California, including founding the original Mission.",
+  "location": {
+   "place": "Anza Street",
+   "center": {
+    "lat": 37.777136,
+    "lng": -122.507444
+   },
+   "zoom": 17
+  }
+ },
+ {
+  "title": "",
+  "text": "The streets were also named alphabetically from north to south, but they couldn't find an early colonist whose name started with a Q so they just made up the name \"Quintara\" because it sounded vaguely Spanish-y.",
+  "location": {
+   "place": "Quintara Street",
+   "center": {
+    "lat": 37.747276,
+    "lng": -122.506848
+   },
+   "zoom": 17
+  }
+ },
+ {
+  "title": "",
   "text": "Judah Street, home of the N-Judah Muni line, is appropriately named after Theodore Dehone Judah, who built California's first railroad in 1856. He also built the transcontinental railroad linking the east and west coasts, but died before it was finished.",
   "location": {
    "place": "Judah Street",
@@ -504,8 +648,20 @@
   }
  },
  {
-  "title": "Yikes",
-  "text": "That's it for now! I'll add more streets to the history later. I haven't even got to the wacky names of the streets in the Sunset.",
+  "title": "",
+  "text": "After the huge fire of 1906, the city decided to tidy up street names, eliminating duplicates and correcting mis-spellings. They tried to give the numbered avenues of the Sunset names but residents rebelled, so they mostly kept the numbers but renamed 49th to La Playa Street.",
+  "location": {
+   "place": "La Playa Street",
+   "center": {
+    "lat": 37.763673,
+    "lng": -122.509403
+   },
+   "zoom": 17
+  }
+ },
+ {
+  "title": "That's it for now!",
+  "text": "I hope you enjoyed these little factoids! If you've got feedback, especially suggestions for additional fun facts, get in touch with <a href=\"https://twitter.com/seldo\">me on Twitter</a>.",
   "location": {
    "place": "The Outer Sunset",
    "center": {
