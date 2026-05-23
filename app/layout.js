@@ -36,7 +36,23 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <footer className="site-footer">
+          A project of{' '}
+          <a href="https://seldo.com" target="_blank" rel="noopener noreferrer">
+            Laurie Voss
+          </a>
+          {' | '}
+          <a
+            href="https://github.com/seldo/sf-street-history"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open source on GitHub
+          </a>
+        </footer>
+      </body>
     </html>
   );
 }
