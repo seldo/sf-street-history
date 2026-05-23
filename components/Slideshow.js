@@ -11,19 +11,21 @@ export default function Slideshow({ slides, initialSlide }) {
 
   const moveSlide = useCallback(
     (direction) => {
-      setCurrentSlide((prev) => {
-        const next =
-          direction === 'left'
-            ? Math.max(0, prev - 1)
-            : Math.min(slides.length - 1, prev + 1);
-        if (next !== prev) {
-          window.history.replaceState(null, '', `/street/${next}/`);
-        }
-        return next;
-      });
+      setCurrentSlide((prev) =>
+        direction === 'left'
+          ? Math.max(0, prev - 1)
+          : Math.min(slides.length - 1, prev + 1),
+      );
     },
     [slides.length],
   );
+
+  useEffect(() => {
+    const targetPath = `/street/${currentSlide}/`;
+    if (window.location.pathname !== targetPath) {
+      window.history.replaceState(null, '', targetPath);
+    }
+  }, [currentSlide]);
 
   const moveLeft = useCallback(() => moveSlide('left'), [moveSlide]);
   const moveRight = useCallback(() => moveSlide('right'), [moveSlide]);

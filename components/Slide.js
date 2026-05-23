@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import {
   EmailShareButton,
@@ -14,13 +14,7 @@ import {
 } from 'react-share';
 import styles from './Slide.module.css';
 
-function getShareUrl() {
-  if (typeof window === 'undefined') return 'https://sfstreethistory.com';
-  return window.location.href;
-}
-
-function getShareText(html) {
-  if (typeof document === 'undefined') return '';
+function stripHtml(html) {
   const div = document.createElement('div');
   div.innerHTML = html;
   return (div.textContent || div.innerText || '').slice(0, 240);
@@ -97,8 +91,14 @@ export default function Slide({ slide, isCurrent, moveLeft, moveRight }) {
     trackMouse: false,
   });
 
-  const shareUrl = getShareUrl();
-  const shareText = getShareText(slide.text);
+  const [shareData, setShareData] = useState(null);
+  useEffect(() => {
+    setShareData({
+      url: window.location.href,
+      text: stripHtml(slide.text),
+    });
+  }, [slide.text]);
+
   const subject = slide.title
     ? `San Francisco Street History: ${slide.title}`
     : 'San Francisco Street History';
@@ -133,42 +133,46 @@ export default function Slide({ slide, isCurrent, moveLeft, moveRight }) {
             className={styles.text}
             dangerouslySetInnerHTML={{ __html: slide.text }}
           />
-          <div className={styles.shareRow}>
-            <TwitterShareButton
-              url={shareUrl}
-              title={shareText}
-              className={styles.shareBtn}
-              aria-label="Share on X"
-            >
-              <XIcon size={22} round />
-            </TwitterShareButton>
-            <BlueskyButton url={shareUrl} text={shareText} />
-            <FacebookShareButton
-              url={shareUrl}
-              className={styles.shareBtn}
-              aria-label="Share on Facebook"
-            >
-              <FacebookIcon size={22} round />
-            </FacebookShareButton>
-            <LinkedinShareButton
-              url={shareUrl}
-              title={subject}
-              summary={shareText}
-              className={styles.shareBtn}
-              aria-label="Share on LinkedIn"
-            >
-              <LinkedinIcon size={22} round />
-            </LinkedinShareButton>
-            <EmailShareButton
-              url={shareUrl}
-              subject={subject}
-              body={`${shareText}\n\n`}
-              className={styles.shareBtn}
-              aria-label="Share by email"
-            >
-              <EmailIcon size={22} round />
-            </EmailShareButton>
-            <CopyButton url={shareUrl} />
+          <div className={styles.shareRow} suppressHydrationWarning>
+            {shareData ? (
+              <>
+                <TwitterShareButton
+                  url={shareData.url}
+                  title={shareData.text}
+                  className={styles.shareBtn}
+                  aria-label="Share on X"
+                >
+                  <XIcon size={22} round />
+                </TwitterShareButton>
+                <BlueskyButton url={shareData.url} text={shareData.text} />
+                <FacebookShareButton
+                  url={shareData.url}
+                  className={styles.shareBtn}
+                  aria-label="Share on Facebook"
+                >
+                  <FacebookIcon size={22} round />
+                </FacebookShareButton>
+                <LinkedinShareButton
+                  url={shareData.url}
+                  title={subject}
+                  summary={shareData.text}
+                  className={styles.shareBtn}
+                  aria-label="Share on LinkedIn"
+                >
+                  <LinkedinIcon size={22} round />
+                </LinkedinShareButton>
+                <EmailShareButton
+                  url={shareData.url}
+                  subject={subject}
+                  body={`${shareData.text}\n\n`}
+                  className={styles.shareBtn}
+                  aria-label="Share by email"
+                >
+                  <EmailIcon size={22} round />
+                </EmailShareButton>
+                <CopyButton url={shareData.url} />
+              </>
+            ) : null}
           </div>
         </div>
 
