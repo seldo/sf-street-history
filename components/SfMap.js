@@ -50,6 +50,7 @@ export default function SfMap({ location }) {
         streetViewControl
         mapTypeControl={false}
         fullscreenControl={false}
+        keyboardShortcuts={false}
         className={styles.map}
       >
         {location?.place ? (
